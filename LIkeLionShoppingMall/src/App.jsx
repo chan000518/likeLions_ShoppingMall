@@ -8,7 +8,6 @@ function App() {
 
   return (
     <>
-       <BrowserRouter>
         <Routes>
           <Route>
             <Route path='/' element={<Layout />}>
@@ -18,7 +17,6 @@ function App() {
             </Route>
           </Route>
         </Routes>
-      </BrowserRouter>
     </>
   )
 }
