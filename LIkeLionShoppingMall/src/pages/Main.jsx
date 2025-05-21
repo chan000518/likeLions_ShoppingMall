@@ -1,3 +1,8 @@
+import { ItemList } from "../component/ItemList"
+import dogData from "../data/dogData.json"
+
 export const Main = () => {
-  return <main className="text-amber-900">Main 페이지입니다.</main>;
+  return <main>
+    <ItemList ItemList ={dogData} />
+  </main>;
 };
