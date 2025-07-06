@@ -8,7 +8,7 @@ export const ItemCard = ({ item, onClick }) => {
   } 
 
   return (
-    <div className="ph:w-full ph:text-sm dt:w-full dt:text-base bg-gradient-to-r rounded-lg shadow">
+    <div className="ph:w-full ph:text-sm dt:w-full dt:text-base bg-gradient-to-r rounded-lg shadow hover:scale-105 hover:shadow-xl transition-transform duration-300 cursor-pointer">
       <div onClick={onClick}>
         <img
           src={image}
@@ -25,7 +25,11 @@ export const ItemCard = ({ item, onClick }) => {
         <p className="text-gray-800 text-sm mt-2">가격: {price}</p>
       </div>
       <div className="relative bottom-5 flex justify-end pr-5">
-        <Button children={"장바구니 담기"} onClick={clickHandle}/>
+        <Button 
+        children={"장바구니 담기"} 
+        onClick={clickHandle}
+        className="hover:scale-105 hover:shadow-xl transition-transform duration-300 cursor-pointer"
+        />
       </div> 
     </div>
   );
