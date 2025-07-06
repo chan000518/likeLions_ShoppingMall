@@ -1,0 +1,23 @@
+{
+  "cartItems":
+  [
+    {
+      "id": 1,
+      "name": "콩이",
+      "category": "강아지",
+      "price": 180000,
+      "quantity": 2,
+      "totalPrice": 360000
+    },
+    {
+      "id": 2,
+      "name": "장풍이",
+      "category": "강아지",
+      "price": 180000,
+      "quantity": 1,
+      "totalPrice": 180000
+    }
+  ],
+  "cartTotalItems": 3,
+  "cartTotalPrice": 540000
+}

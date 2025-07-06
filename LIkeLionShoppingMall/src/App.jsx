@@ -3,21 +3,21 @@ import { Main } from './pages/Main';
 import { Signup } from './pages/Signup';
 import { Layout } from './component/layout/Layout';
 import './index.css';
+import { Product } from './pages/Product';
+import { Cart } from './pages/Cart';
 
 function App() {
 
   return (
-    <>
-        <Routes>
-          <Route>
-            <Route path='/' element={<Layout />}>
-              <Route index element={<Main />}/>
-              <Route path='/Signup' element={<Signup />}/>
-              <Route/>
-            </Route>
-          </Route>
-        </Routes>
-    </>
+    <Routes>
+      <Route path='/' element={<Layout />}>
+        <Route index element={<Main />}/>
+        <Route path='/Signup' element={<Signup />}/>
+        <Route path='/Product/:id' element={<Product />}/>
+        <Route path='/Cart' element={<Cart />}/>
+        <Route/>
+      </Route>
+    </Routes>
   )
 }
 

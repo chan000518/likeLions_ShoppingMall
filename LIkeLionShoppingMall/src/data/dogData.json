@@ -1,42 +1,26 @@
 [
   {
     "id": 1,
-    "image": "/src/assets/zhddl.jpeg",
-    "title": "콩이",
-    "Seller": "김지윤",
-    "age": "7살",
-    "ancestry": "제주 토종",
-    "cute": "★★★★★",
-    "price": "150,000원"
+    "name": "콩이",
+    "category": "강아지",
+    "price": 180000
   },
   {
     "id": 2,
-    "image": "/src/assets/wkdvnddl.jpeg",
-    "title": "장풍이",
-    "Seller": "이승찬",
-    "age": "10살",
-    "ancestry": "무에타이계 잡종",
-    "cute": "★★★★☆",
-    "price": "180,000원"
+    "name": "장풍이",
+    "category": "강아지",
+    "price": 180000
   },
   {
     "id": 3,
-    "image": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d",
-    "title": "땅콩이",
-    "Seller": "최은비",
-    "age": "2살",
-    "ancestry": "웰시코기+불독 혼혈",
-    "cute": "★★★★★",
-    "price": "300,000원"
+    "name": "콩콩이",
+    "category": "강아지",
+    "price": 180000
   },
   {
     "id": 4,
-    "image": "https://images.unsplash.com/photo-1560807707-8cc77767d783",
-    "title": "우주",
-    "Seller": "박태형",
-    "age": "4살",
-    "ancestry": "러시안 블루견",
-    "cute": "★★★☆☆",
-    "price": "220,000원"
+    "name": "콩콩콩이",
+    "category": "강아지",
+    "price": 180000
   }
 ]
