@@ -7,12 +7,12 @@ export const Navbar = () => {
 
   return (
     <>
-       <nav className="fixed top-0  border-amber-400 left-0 right-0 h-20 bg-amber-200 text-amber-500">
+       <nav className="fixed top-0 items-center border-amber-400 left-0 right-0 h-20 bg-amber-200 text-amber-500">
         <div className="flex justify-between items-center relative h-full px-8">
           <Link to="/" className="font-semibold text-2xl py-5">
             멋사몰🐯
           </Link>
-          <div className="flex mb-2 shadow-lg items-stretch bg-amber-100 rounded-md overflow-hidden">
+          <div className="flex shadow-lg items-stretch bg-amber-100 rounded-md overflow-hidden">
            <input
             type="text"
             placeholder="검색어를 입력하세요"
