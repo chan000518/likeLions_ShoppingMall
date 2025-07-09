@@ -21,10 +21,10 @@ export const Product = () => {
   return (
     <div className="relative">
 
-    <div className="min-h-screen flex items-center justify-center bg-white px-4">
+    <div className="mt-10 flex items-center justify-center bg-white px-4">
       <div className="max-w-2xl w-full bg-amber-50 p-10 rounded-md flex flex-col md:flex-row gap-10">
     <img
-      src="/src/assets/wkdvnddl.jpeg"
+      src="/src/assets/item.png"
       alt={name}
       className="w-72 h-72 object-cover rounded"
       />

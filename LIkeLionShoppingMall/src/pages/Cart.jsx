@@ -20,7 +20,7 @@ export const Cart = () => {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-4 text-center">장바구니</h1>
+      <h1 className="text-3xl font-bold my-4 text-center">장바구니</h1>
       <CartList Data={CartData} onDelete={DeleteHandler} />
     </div>
   );

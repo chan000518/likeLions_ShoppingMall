@@ -16,6 +16,14 @@
       "price": 180000,
       "quantity": 1,
       "totalPrice": 180000
+    },
+    {
+      "id": 3,
+      "name": "장풍이",
+      "category": "강아지",
+      "price": 180000,
+      "quantity": 4,
+      "totalPrice": 720000
     }
   ],
   "cartTotalItems": 3,

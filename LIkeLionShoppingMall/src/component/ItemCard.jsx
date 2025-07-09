@@ -13,21 +13,24 @@ export const ItemCard = ({ item }) => {
     <div className="ph:w-full ph:text-sm dt:w-full dt:text-base bg-gradient-to-r rounded-lg shadow hover:scale-105 hover:shadow-xl transition-transform duration-300 cursor-pointer">
       <Link to={`/Product/${id}`}>
         <img
-          src={"/src/assets/wkdvnddl.jpeg"}
+          src={"/src/assets/item.png"}
           alt={`${name} 커버`}
-          className="w-full ph:h-80 dt:h-80 object-cover rounded mb-4"
+          className="w-full h-40 object-contain rounded mb-4"
         />
-        <h2 className="text-2xl font-semibold text-black" >{name}</h2>
-        <p className ="text-gray-700 text-sm mb-2">{category}</p>
-        <p className="text-gray-900 text-lg font-bold mb-4">{price.toLocaleString()}원</p>
-        <hr className="my-4 border-gray-600" />
+        <div className="px-4">
+          <h2 className="text-2xl font-semibold text-black" >상품명: {name}</h2>
+          <p className ="text-gray-700 text-sm">카테고리: {category}</p>
+        </div>
       </Link>
-      <div className="relative bottom-5 flex justify-end pr-5">
+      <div className="flex items-center justify-between px-4 py-2"> 
+        <p className="text-gray-900 text-lg font-bold">{price.toLocaleString()}원</p>
         <Button 
-        children={"장바구니 담기"} 
-        onClick={clickHandle}
-        className="hover:scale-105 hover:shadow-xl transition-transform duration-300 cursor-pointer"
+          children={"장바구니 담기"} 
+          onClick={clickHandle}
+          className="hover:scale-105 hover:shadow-xl transition-transform duration-300 cursor-pointer"
         />
+       </div>
+      <div className="relative bottom-5 flex justify-end pr-5">
       </div> 
     </div>
   );

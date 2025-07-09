@@ -89,7 +89,7 @@ export const Signup = () => {
   
 
   return (
-    <div className="min-h-[calc(100vh-80px)] flex items-center justify-center bg-gray-100 pt-20">
+    <div className="min-h-[calc(100vh-80px)] flex items-center justify-center bg-gray-100 ">
        <div className="w-[380px] h-[500px] bg-amber-100 rounded-xl shadow-md p-6 flex flex-col justify-center items-center">
           <h2 className="pb-2.5 text-lg font-bold mb-2 text-amber-500 text-center leading-relaxed">카카오톡으로 간편하게 로그인하고<br /> 서비스를 이용해보세요!</h2>
           <button className="group mt-17 w-full relative bg-[#FEE500] text-white font-semibold  py-2.5 px-4 rounded-md text-sm">
