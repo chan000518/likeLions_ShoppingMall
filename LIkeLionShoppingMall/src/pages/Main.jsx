@@ -9,7 +9,7 @@ export const Main = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const { products } = await fetchAllProducts();
+      const products  = await fetchAllProducts();
       console.log(products);
       setProductsData(products);
     };
