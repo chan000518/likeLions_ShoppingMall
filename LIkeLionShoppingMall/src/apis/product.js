@@ -2,14 +2,22 @@ import instance from "./instance";
 import ApiError from "./ApiError";
 
 export async function fetchAllProducts(){
- try {
-  const res = await instance.get('/products');
-  return res.data;
-      }
-    catch(err) {
-      ApiError(err);
-    }
+  try {
+    const res = await instance.get('/products');
+    return res.data;
+  }
+  catch(err) {
+    ApiError(err);
+  }
 }
+// {
+// "product”:
+//   [
+//     {”id” : BIGINT, 
+//      “name”: String,
+//      “price”: int}
+//   ]
+// }
 
 export async function fetchProductByID(id) {
   try {
@@ -20,7 +28,14 @@ export async function fetchProductByID(id) {
     ApiError(err);
   }
 }
-export async function fecthProductByName(name) {
+// {
+// ”id” : BIGINT,
+// “name”: String,
+// “price”: int,
+// “infor”:string
+// }
+
+export async function fetchProductByName(name) {
   if(!name) return;
   try {
     const res = await instance.get(`/products?name=${encodeURIComponent(name)}`);
@@ -30,3 +45,9 @@ export async function fecthProductByName(name) {
     ApiError(err);
   }
 }
+// {“product” : [
+// { 
+// “name”: String,
+// “price”: int
+// }
+// ]}
