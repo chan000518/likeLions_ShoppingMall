@@ -3,7 +3,7 @@ import ApiError from "./ApiError";
 
 export async function fetchAllProducts(){
   try {
-    const res = await instance.get('/products');
+    const res = await instance.get('/products/list');
     return res.data;
   }
   catch(err) {
@@ -38,7 +38,7 @@ export async function fetchProductByID(id) {
 export async function fetchProductByName(name) {
   if(!name) return;
   try {
-    const res = await instance.get(`/products?name=${encodeURIComponent(name)}`);
+    const res = await instance.get(`/products/list/?name=${encodeURIComponent(name)}`);
     return res.data;
   }
   catch (err) {

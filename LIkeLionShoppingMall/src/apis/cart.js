@@ -3,9 +3,8 @@ import ApiError from "./ApiError";
 
 
 export async function fetchCart() {
-
   try {
-    const res = await instance.get("./carts");
+    const res = await instance.get("./cart");
     return res.data;
   }
   catch (err) {
@@ -14,7 +13,7 @@ export async function fetchCart() {
 }
 export async function fetchAddToCart({product_id, quantity}) {
   try {
-    const res = await instance.post("/carts",{
+    const res = await instance.post("/cart",{
       product_id,
       quantity,
     });
@@ -25,7 +24,7 @@ export async function fetchAddToCart({product_id, quantity}) {
 }
 export async function fetchRemoveCartItem(product_id) {
   try{
-    const res = await instance.delete(`/carts/${product_id}`);
+    const res = await instance.delete(`/cart/${product_id}`);
     return res.data;
   }
   catch(err){
