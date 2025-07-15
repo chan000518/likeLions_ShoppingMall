@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { Input } from "../component/Input";
-import { useNavigate } from "react-router-dom";
-import { Button } from "../component/Button";
-import KakaoIcon from "../assets/kakao-icon.png";
+import React, { useState } from 'react';
+import { Input } from '../component/Input';
+import { useNavigate } from 'react-router-dom';
+import { Button } from '../component/Button';
+import KakaoIcon from '../assets/kakao-icon.png';
 
 /*
 export const Signup = () => {
@@ -86,21 +86,22 @@ export const Signup = () => {
 };
 */
 export const Signup = () => {
-  
-
   return (
     <div className="min-h-[calc(100vh-80px)] flex items-center justify-center bg-gray-100 ">
-       <div className="w-[380px] h-[500px] bg-amber-100 rounded-xl shadow-md p-6 flex flex-col justify-center items-center">
-          <h2 className="pb-2.5 text-lg font-bold mb-2 text-amber-500 text-center leading-relaxed">카카오톡으로 간편하게 로그인하고<br /> 서비스를 이용해보세요!</h2>
-          <button className="group mt-17 w-full relative bg-[#FEE500] text-white font-semibold  py-2.5 px-4 rounded-md text-sm">
-            <span className="block text-center w-full">카카오톡으로 로그인</span>
-            <img 
-              src={KakaoIcon}
-              alt="Kakao"
-              className="absolute right-4 top-[48%] -translate-y-1/2 w-9 h-9"
-              />
-          </button>
-       </div>
+      <div className="w-[380px] h-[500px] bg-amber-100 rounded-xl shadow-md p-6 flex flex-col justify-center items-center">
+        <h2 className="pb-2.5 text-lg font-bold mb-2 text-amber-500 text-center leading-relaxed">
+          카카오톡으로 간편하게 로그인하고
+          <br /> 서비스를 이용해보세요!
+        </h2>
+        <button className="group mt-17 w-full relative bg-[#FEE500] text-white font-semibold  py-2.5 px-4 rounded-md text-sm">
+          <span className="block text-center w-full">카카오톡으로 로그인</span>
+          <img
+            src={KakaoIcon}
+            alt="Kakao"
+            className="absolute right-4 top-[48%] -translate-y-1/2 w-9 h-9"
+          />
+        </button>
+      </div>
     </div>
-  ); 
-}
+  );
+};

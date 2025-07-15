@@ -1,10 +1,11 @@
-import { CartList } from "../component/CartList"
-import cartData from "../data/cartData.json"
-import { fetchCart, fetchAddToCart, fetchRemoveCartItem } from "../apis/cart";
+import { CartList } from '../component/CartList';
+import cartData from '../data/cartData.json';
+import { fetchCart, fetchAddToCart, fetchRemoveCartItem } from '../apis/cart';
 import { useQuery } from '@tanstack/react-query';
 
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState } from 'react';
+import { useEffect } from 'react';
+
 export const Cart = () => {
   const [data, setCartData] = useState({});
 
@@ -22,18 +23,21 @@ export const Cart = () => {
   //   staleTime: 1000 * 60 * 5, // 5분 동안 캐시 유지
   //   cacheTime: 1000 * 60 * 10, // 10분 동안 캐시 유지
   // });
-  
+
   const DeleteHandler = (id) => {
-    const updatedCartItems = data.cartItems?.filter(item => item.id !== id);
+    const updatedCartItems = data.cartItems?.filter((item) => item.id !== id);
     const updatedCartTotalItems = updatedCartItems?.length;
-    const updatedCartTotalPrice = updatedCartItems?.reduce((total, item) => total + item.price * item.quantity, 0);
+    const updatedCartTotalPrice = updatedCartItems?.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
     // fetchRemoveCartItem(id);
-    
+
     setCartData({
       ...data,
       cartItems: updatedCartItems,
       cartTotalItems: updatedCartTotalItems,
-      cartTotalPrice: updatedCartTotalPrice
+      cartTotalPrice: updatedCartTotalPrice,
     });
   };
 

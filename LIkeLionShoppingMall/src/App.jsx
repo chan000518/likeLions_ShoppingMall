@@ -7,18 +7,17 @@ import { Product } from './pages/Product';
 import { Cart } from './pages/Cart';
 
 function App() {
-
   return (
     <Routes>
-      <Route path='/' element={<Layout />}>
-        <Route index element={<Main />}/>
-        <Route path='/Signup' element={<Signup />}/>
-        <Route path='/Product/:id' element={<Product />}/>
-        <Route path='/Cart' element={<Cart />}/>
-        <Route/>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Main />} />
+        <Route path="/Signup" element={<Signup />} />
+        <Route path="/Product/:id" element={<Product />} />
+        <Route path="/Cart" element={<Cart />} />
+        <Route />
       </Route>
     </Routes>
-  )
+  );
 }
 
-export default App
+export default App;

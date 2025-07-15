@@ -1,19 +1,18 @@
-import instance from "./instance";
-import ApiError from "./ApiError";
+import instance from './instance';
+import ApiError from './ApiError';
 
-export async function fetchAllProducts(){
+export async function fetchAllProducts() {
   try {
     const res = await instance.get('/products/list');
     return res.data;
-  }
-  catch(err) {
+  } catch (err) {
     ApiError(err);
   }
 }
 // {
 // "product”:
 //   [
-//     {”id” : BIGINT, 
+//     {”id” : BIGINT,
 //      “name”: String,
 //      “price”: int}
 //   ]
@@ -22,9 +21,8 @@ export async function fetchAllProducts(){
 export async function fetchProductByID(id) {
   try {
     const res = await instance.get(`/products/${id}`);
-    return res.data
-  }
-  catch(err) {
+    return res.data;
+  } catch (err) {
     ApiError(err);
   }
 }
@@ -36,17 +34,18 @@ export async function fetchProductByID(id) {
 // }
 
 export async function fetchProductByName(name) {
-  if(!name) return;
+  if (!name) return;
   try {
-    const res = await instance.get(`/products/list/?name=${encodeURIComponent(name)}`);
+    const res = await instance.get(
+      `/products/list/?name=${encodeURIComponent(name)}`
+    );
     return res.data;
-  }
-  catch (err) {
+  } catch (err) {
     ApiError(err);
   }
 }
 // {“product” : [
-// { 
+// {
 // “name”: String,
 // “price”: int
 // }
