@@ -24,14 +24,15 @@ export const Cart = () => {
   //   cacheTime: 1000 * 60 * 10, // 10분 동안 캐시 유지
   // });
 
-  const DeleteHandler = (id) => {
+  // 삭제
+  const DeleteHandler = async (id) => {
+    // await fetchRemoveCartItem(id);
     const updatedCartItems = data.cartItems?.filter((item) => item.id !== id);
     const updatedCartTotalItems = updatedCartItems?.length;
     const updatedCartTotalPrice = updatedCartItems?.reduce(
       (total, item) => total + item.price * item.quantity,
       0
     );
-    // fetchRemoveCartItem(id);
 
     setCartData({
       ...data,

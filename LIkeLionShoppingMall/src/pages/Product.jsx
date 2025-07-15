@@ -4,13 +4,22 @@ import React, { useState } from 'react';
 import { Button } from '../component/Button';
 import { useQuantity } from '../hooks/useQuantity';
 import CartModal from '../component/CartModal';
+import {fetchAddToCart} from '../apis/cart';
 
 export const Product = () => {
   const [showModal, setShowModal] = useState(false);
   const { id } = useParams();
-  const handleAddToCart = () => {
+
+  // 장바구니 추가 핸들러
+  const handleAddToCart = async () => {
     // 장바구니 추가 로직
-    setShowModal(true);
+    try{
+      await fetchAddToCart({ product_id: id, quantity: 1 }); 
+      setShowModal(true);
+    }
+    catch (error) {
+      console.error('장바구니에 추가하는 데 실패했습니다:', error);
+    }
   };
   const product = dogData.find((item) => item.id == parseInt(id));
   if (!product) return <div>상품이 존재하지 않습니다.</div>;
