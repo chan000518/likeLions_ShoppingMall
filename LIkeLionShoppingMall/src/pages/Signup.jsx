@@ -93,7 +93,7 @@ export const Signup = () => {
           카카오톡으로 간편하게 로그인하고
           <br /> 서비스를 이용해보세요!
         </h2>
-        <button className="group mt-17 w-full relative bg-[#FEE500] text-white font-semibold  py-2.5 px-4 rounded-md text-sm">
+        <button className="group mt-17 w-full relative bg-[#FEE500] text-white font-semibold  py-2.5 px-4 rounded-md text-sm cursor-pointer">
           <span className="block text-center w-full">카카오톡으로 로그인</span>
           <img
             src={KakaoIcon}
