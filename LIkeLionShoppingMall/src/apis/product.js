@@ -18,9 +18,9 @@ export async function fetchAllProducts() {
 //   ]
 // }
 
-export async function fetchProductByID(id) {
+export async function fetchProductByID(productId) {
   try {
-    const res = await instance.get(`/products/${id}`);
+    const res = await instance.get(`/products/${productId}`);
     return res.data;
   } catch (err) {
     ApiError(err);
@@ -37,7 +37,7 @@ export async function fetchProductByName(name) {
   if (!name) return;
   try {
     const res = await instance.get(
-      `/products/list/?name=${encodeURIComponent(name)}`
+      `/products/list?productName=${encodeURIComponent(name)}`
     );
     return res.data;
   } catch (err) {
