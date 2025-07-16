@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import SearchIcon from '../../assets/Search.jpg';
+import SearchIcon from '/assets/Search.jpg';
 import React from 'react';
 
   const Navbar = ({search, setSearch,onSearch,onReset}) => {

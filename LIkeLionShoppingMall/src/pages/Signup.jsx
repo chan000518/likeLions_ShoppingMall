@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Input } from '../component/Input';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../component/Button';
-import KakaoIcon from '../assets/kakao-icon.png';
+import KakaoIcon from '/assets/kakao-icon.png';
 
 /*
 export const Signup = () => {

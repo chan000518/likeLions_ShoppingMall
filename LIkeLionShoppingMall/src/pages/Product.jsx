@@ -42,7 +42,7 @@ export const Product = () => {
       <div className="flex items-center justify-center bg-white px-4">
         <div className="max-w-2xl w-full bg-amber-50 p-10 rounded-md flex flex-col md:flex-row gap-10">
           <img
-            src="/src/assets/item.png"
+            src="/assets/item.png"
             alt={productName}
             className="w-72 h-72 object-cover rounded"
           />
@@ -56,9 +56,9 @@ export const Product = () => {
             <div className="flex justify-between items-center gap-2">
               <p className="text-gray-700 mb-0">구매 수량</p>
               <div className="flex items-center justify-center px-3 py-1 rounded ">
-                <button onClick={decrease} className="font-bold text-lg w-6 h-6">-</button>
+                <button onClick={decrease} className="font-bold text-lg w-6 h-6 cursor-pointer">-</button>
                 <span className="px-4">{quantity}</span>
-                <button onClick={increase} className="font-bold text-lg w-6 h-6">+</button>
+                <button onClick={increase} className="font-bold text-lg w-6 h-6 cursor-pointer">+</button>
               </div>
             </div>
             <div className="flex justify-between items-center mb-6">

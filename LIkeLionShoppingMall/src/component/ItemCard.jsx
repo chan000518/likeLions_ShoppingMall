@@ -12,7 +12,7 @@ export const ItemCard = ({ item }) => {
     <div className="ph:w-full ph:text-sm dt:w-full dt:text-base bg-gradient-to-r rounded-lg shadow hover:scale-105 hover:shadow-xl transition-transform duration-300 cursor-pointer">
       <Link to={`/Product/${item.productId}`}>
         <img
-          src={'/src/assets/item.png'}
+          src={'/assets/item.png'}
           alt={`${ productName} 커버`}
           className="w-full h-40 object-contain rounded mb-4"
         />
