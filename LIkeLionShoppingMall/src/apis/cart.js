@@ -9,10 +9,10 @@ export async function fetchCart() {
     ApiError(err);
   }
 }
-export async function fetchAddToCart({ product_id, quantity }) {
+export async function fetchAddToCart({ productId, quantity }) {
   try {
     const res = await instance.post('/cart', {
-      product_id,
+      productId,
       quantity,
     });
     return res.data;

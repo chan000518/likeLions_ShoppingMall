@@ -8,7 +8,7 @@ export const CartCard = ({ item, onDelete }) => {
     <div className="flex flex-col md:flex-row bg-gray-200 mb-4 px-4 justify-between items-center w-full ph:text-sm dt:text-base bg-gradient-to-r rounded-lg shadow hover:scale-105 hover:shadow-xl transition-transform duration-300 cursor-pointer">
       <Link to={`/Product/${id}`}>
         <img
-          src={'/src/assets/item.png'}
+          src={'/assets/item.png'}
           alt={`${name} 커버`}
           className="h-40 object-contain rounded"
         />
