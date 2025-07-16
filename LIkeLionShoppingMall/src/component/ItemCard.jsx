@@ -1,12 +1,19 @@
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
+import { fetchAddToCart } from '../apis/cart';
 
-export const ItemCard = ({ item }) => {
+export const ItemCard = ({ item, setShowModal }) => {
   const { productId, productName, category, price } = item;
+  
 
-  const clickHandle = () => {
-    alert(productName + '가 장바구니에 담겼어요!');
-  };
+  const handleAddToCart = async () => {
+      try {
+        await fetchAddToCart({ productId: productId, quantity: 1 }); 
+        setShowModal(true);
+      } catch (error) {
+        console.error('장바구니에 추가하는 데 실패했습니다:', error);
+      }
+    };
 
   return (
     <div className="ph:w-full ph:text-sm dt:w-full dt:text-base bg-gradient-to-r rounded-lg shadow hover:scale-105 hover:shadow-xl transition-transform duration-300 cursor-pointer">
@@ -27,7 +34,7 @@ export const ItemCard = ({ item }) => {
         </p>
         <Button
           children={'장바구니 담기'}
-          onClick={clickHandle}
+          onClick={handleAddToCart}
           className="hover:scale-105 hover:shadow-xl transition-transform duration-300 cursor-pointer"
         />
       </div>
