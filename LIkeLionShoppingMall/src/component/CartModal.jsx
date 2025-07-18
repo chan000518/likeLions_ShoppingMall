@@ -21,7 +21,7 @@ export default function CartModal({ onClose }) {
 
           <div className="flex justify-between w-full mt-4">
             <button
-              onClick={() => navigate('/')}
+              onClick={onClose}
               className="bg-white cursor-pointer text-amber-500 py-2 px-4 rounded-md"
             >
               쇼핑 계속하기

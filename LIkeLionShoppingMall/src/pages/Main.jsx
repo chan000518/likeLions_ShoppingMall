@@ -5,8 +5,10 @@ import { fetchProductByName } from '../apis/product';
 import React from 'react';
 import Navbar from "../component/layout/Navbar";
 import '../index.css';
+import CartModal from '../component/CartModal';
 
 export const Main = () => {
+  const [ showModal, setShowModal] = useState(false);
   const [productsData, setProductsData] = useState([]);
   const [search, setSearch] = useState("");
   const [filteredData, setFilteredData] = useState([]);
@@ -34,7 +36,8 @@ export const Main = () => {
   return (
     <main>
       <Navbar search={search} setSearch={setSearch} onSearch={handleSearch} onReset={handleReset}/>
-      <ItemList ItemList={filteredData} />
+      <ItemList ItemList={filteredData} setShowModal = {setShowModal} />
+      {showModal && <CartModal onClose={() => setShowModal(false)} />}
     </main>
   );
 };
