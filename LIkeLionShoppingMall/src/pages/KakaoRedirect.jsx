@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useAuthStore } from "../stores/useAuthStore";
 import { login } from "../apis/auth";
 import React from "react";
-const KakaoRedirectPage = () => {
+const KakaoRedirect = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const {setTokens} = useAuthStore();
@@ -36,4 +36,4 @@ const KakaoRedirectPage = () => {
 }
 
 
-export default KakaoRedirectPage;
+export default KakaoRedirect;

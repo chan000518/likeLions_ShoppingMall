@@ -6,8 +6,11 @@ export const Signup = () => {
   const REST_API_KEY = import.meta.env.VITE_KAKAO_API_KEY;
 
   const kakaoURL = `https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}`;
-  const handleLogin = () => {
-    window.location.herf = kakaoURL;
+  const handleLogin = (e) => {
+    e.preventDefault();
+    console.log("로그인 버튼 클릭됨");
+    console.log('카카오 URL: ',kakaoURL);
+    window.open(kakaoURL, "_self");
   }
   return (
     <div className="min-h-[calc(100vh-80px)] flex items-center justify-center bg-gray-100 ">
