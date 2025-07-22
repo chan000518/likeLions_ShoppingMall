@@ -1,13 +1,18 @@
-import { Button } from './Button';
+import { Button } from '../Button';
 import { Link } from 'react-router-dom';
-import { fetchAddToCart } from '../apis/cart';
+import { fetchAddToCart } from '../../apis/cart';
+import { useAuthStore } from '../../stores/useAuthStore';
 
-export const ItemCard = ({ item, setShowModal }) => {
+export const ItemCard = ({ item, setShowModal, setLoginModal }) => {
   const { productId, productName, category, price } = item;
-  
+  const { isLoggedIn } = useAuthStore();  
 
   const handleAddToCart = async () => {
       try {
+        if(!isLoggedIn) {
+          setLoginModal(true);
+          return
+        }
         await fetchAddToCart({ productId: productId, quantity: 1 }); 
         setShowModal(true);
       } catch (error) {

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { CartCard } from './CartCard';
-import { Button } from './Button';
+import { Button } from '../Button';
 
 export const CartList = ({ Data, onDelete }) => {
   return (

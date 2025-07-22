@@ -1,12 +1,26 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import SearchIcon from '/assets/Search.jpg';
 import React from 'react';
 
-  const Navbar = ({search, setSearch,onSearch,onReset}) => {
+import { useAuthStore } from '../../stores/useAuthStore';
+import { LoginModal } from '../modal/LoginModal';
+
+const Navbar = ({search, setSearch,onSearch,onReset}) => {
+  const { isLoggedIn } = useAuthStore();
+  const navigate = useNavigate();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleLinkClick = ( link ) => {
+    if(isLoggedIn) {
+      navigate(link);
+    } else{
+      setIsModalOpen(true);
+    }
+  };
+
   return (
-    <>
-      
+    <>  
       <nav className="fixed top-0 items-center border-amber-400 left-0 right-0 h-20 bg-amber-200 text-amber-500">
         <div className="flex justify-between items-center relative h-full px-8">
           <Link 
@@ -40,15 +54,17 @@ import React from 'react';
             </button>
           </div>
           <div className="flex items-center gap-4">
-            <Link to="/Signup" className="text-sm font-medium">
-              Sign In
+            <Link to="/Login" className="text-sm font-medium">
+              Login
             </Link>
-            <Link to="/cart" className="text-sm font-medium">
+            <div onClick={() => handleLinkClick("/cart")} className="text-sm font-medium">
               Cart
-            </Link>
+            </div>
           </div>
         </div>
       </nav>
+      {/* 로그인 모달 띄우기 */}
+      {isModalOpen && <LoginModal onClose={()=>setIsModalOpen(false)}/>}
     </>
   );
 };

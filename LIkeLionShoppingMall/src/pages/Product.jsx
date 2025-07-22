@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import { Button } from '../component/Button';
 import { useQuantity } from '../hooks/useQuantity';
-import CartModal from '../component/CartModal';
+import CartModal from '../component/cart/CartModal';
 import { fetchAddToCart } from '../apis/cart';
 import { fetchProductByID } from '../apis/product'; 
 

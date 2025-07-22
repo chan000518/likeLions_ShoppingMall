@@ -1,6 +1,6 @@
-import { CartList } from '../component/CartList';
+import { CartList } from '../component/cart/CartList';
 import cartData from '../data/cartData.json';
-import { fetchCart, fetchAddToCart, fetchRemoveCartItem } from '../apis/cart';
+import { fetchCart, fetchRemoveCartItem } from '../apis/cart';
 import { useQuery } from '@tanstack/react-query';
 
 import { useState } from 'react';
@@ -26,7 +26,7 @@ export const Cart = () => {
 
   // 삭제
   const DeleteHandler = async (id) => {
-    // await fetchRemoveCartItem(id);
+    await fetchRemoveCartItem(id);
     const updatedCartItems = data.cartItems?.filter((item) => item.id !== id);
     const updatedCartTotalItems = updatedCartItems?.length;
     const updatedCartTotalPrice = updatedCartItems?.reduce(

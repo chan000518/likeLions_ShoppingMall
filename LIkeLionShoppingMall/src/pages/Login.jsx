@@ -1,7 +1,7 @@
 import React from 'react';
 import KakaoIcon from '/assets/kakao-icon.png';
 
-export const Signup = () => {
+export const Login = () => {
   const REDIRECT_URI = import.meta.env.VITE_KAKAO_REDIRECT_URI;
   const REST_API_KEY = import.meta.env.VITE_KAKAO_API_KEY;
 
