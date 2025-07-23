@@ -19,6 +19,11 @@ const Navbar = ({search, setSearch,onSearch,onReset}) => {
     }
   };
 
+  const handleLogout = ( ) => {
+    useAuthStore.getState().clearAuth();
+    navigate('/');
+  };
+
   return (
     <>  
       <nav className="fixed top-0 items-center border-amber-400 left-0 right-0 h-20 bg-amber-200 text-amber-500">
@@ -54,9 +59,14 @@ const Navbar = ({search, setSearch,onSearch,onReset}) => {
             </button>
           </div>
           <div className="flex items-center gap-4">
+            {isLoggedIn ? 
+            <div onClick={() => handleLogout} className="text-sm font-medium">
+              Logout
+            </div>
+            :
             <Link to="/Login" className="text-sm font-medium">
               Login
-            </Link>
+            </Link>}
             <div onClick={() => handleLinkClick("/cart")} className="text-sm font-medium">
               Cart
             </div>
